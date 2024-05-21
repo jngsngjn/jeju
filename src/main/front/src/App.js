@@ -13,7 +13,7 @@ function selectData() {
 
 function App() {
   return (
-      <a href="http://localhost:8080/api/oauth2/authorization/naver">네이버 로그인</a>
+      <a href="http://localhost:8080/jeju/oauth2/authorization/naver">네이버 로그인</a>
   );
 }
 
