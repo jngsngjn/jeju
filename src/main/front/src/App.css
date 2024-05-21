@@ -36,3 +36,14 @@
     transform: rotate(360deg);
   }
 }
+
+.naver-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+.naver-logo {
+  width: 150px;
+}
