@@ -19,11 +19,11 @@ function App() {
   };
 
   return (
-      <a href="http://localhost:8080/jeju/oauth2/authorization/naver">네이버 로그인</a>
       <div className="App">
           <header className="App-header">
+              <a href="http://localhost:8080/jeju/oauth2/authorization/naver">네이버 로그인</a>
               <button onClick={handleLogin} className="naver-button">
-                  <img src={naverLogo} alt="Naver Logo" className="naver-logo" />
+                  <img src={naverLogo} alt="Naver Logo" className="naver-logo"/>
               </button>
           </header>
       </div>
