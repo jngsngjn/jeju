@@ -1,49 +1,49 @@
-.App {
-  text-align: center;
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.nav-left {
+    display: flex;
+    align-items: center;
+    display: block;
+    margin-left: 180px;
+    margin-right: auto;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.nav-right {
+    display: flex;
+    align-items: center;
+    display: block;
+    margin-left: auto;
+    margin-right: 180px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.header {
+    text-decoration-line: none;
+    margin-right: 20px;
+    color: inherit;
+    font-size: 23px;
 }
 
-.App-link {
-  color: #61dafb;
+.header:last-child {
+    margin-right: 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.header:hover {
+    cursor: pointer;
+    color: blue;
 }
 
-.naver-button {
-  background: none;
-  border: none;
-  cursor: pointer;
-  outline: none;
-}
-
-.naver-logo {
-  width: 150px;
+.search-bar {
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    width: 250px;
+    height: 30px;
+    background-color: rgba(127, 255, 212, 0.32);
+    opacity: 0.8;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }

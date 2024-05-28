@@ -1,7 +1,11 @@
 import React from "react";
-import axios from "axios";
+import {BrowserRouter, Routes, Route, Link} from "react-router-dom";
 import './App.css';
-import naverLogo from './naver_logo.png';
+import Home from './home';
+import MyPage from './mypage';
+import Login from './login';
+
+import axios from "axios";
 
 function selectData() {
   axios.get('/hello')  // 프록시 설정에 의해 http://localhost:8080이 자동으로 붙습니다.
@@ -14,20 +18,27 @@ function selectData() {
 }
 
 function App() {
-  const handleLogin = () => {
-      window.location.href = 'http://localhost:8080/oauth2/authorization/naver';
-  };
-
-  return (
-      <div className="App">
-          <header className="App-header">
-              <a href="http://localhost:8080/jeju/oauth2/authorization/naver">네이버 로그인</a>
-              <button onClick={handleLogin} className="naver-button">
-                  <img src={naverLogo} alt="Naver Logo" className="naver-logo"/>
-              </button>
-          </header>
-      </div>
-  );
+    return (
+        <BrowserRouter>
+            <nav>
+                <div className="nav-left">
+                    <Link to='/home' className="header header-home">Home</Link>
+                    <input type="text" placeholder="검색어를 입력하세요." className="search-bar" />
+                </div>
+                <div className="nav-right">
+                    <Link to='/login' className="header header-login">Login</Link>
+                    <Link to='/mypage' className="header header-mypage">MyPage</Link>
+                </div>
+            </nav>
+            <hr/>
+            <Routes>
+                <Route path='/' element={<Home />} />
+                <Route path='/home' element={<Home />} />
+                <Route path='/mypage' element={<MyPage />} />
+                <Route path='/login' element={<Login />} />
+            </Routes>
+        </BrowserRouter>
+    );
 }
 
 export default App;
