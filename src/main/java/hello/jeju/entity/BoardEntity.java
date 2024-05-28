@@ -1,4 +1,4 @@
 package hello.jeju.entity;
 
-public class Photo {
+public class BoardEntity {
 }
