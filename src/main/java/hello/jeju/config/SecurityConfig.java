@@ -20,14 +20,16 @@ public class SecurityConfig {
 
         http.csrf(csrf -> csrf.disable());
 
-        http.formLogin(login -> login.disable());
+        http.formLogin(login -> login.loginPage("/auth/login").permitAll());
 
         http.httpBasic(basic -> basic.disable());
 
         http.oauth2Login(Customizer.withDefaults());
 
+        http.logout(logout -> logout.logoutUrl("/auth/logout").permitAll());
+
         http.authorizeHttpRequests(auth -> auth
-                .requestMatchers("/", "/oauth2/**", "/login").permitAll()
+                .requestMatchers("/", "/auth/**", "/auth/login").permitAll()
                 .requestMatchers("/index.html").permitAll()
                 .anyRequest().authenticated()
         );

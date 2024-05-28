@@ -15,7 +15,7 @@ function selectData() {
 
 function App() {
   const handleLogin = () => {
-      window.location.href = 'https://nid.naver.com/nidlogin.login';
+      window.location.href = 'http://localhost:8080/oauth2/authorization/naver';
   };
 
   return (
